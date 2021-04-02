@@ -1,0 +1,20 @@
+<!-- Navigation-->
+{% url 'public:index' as index_url %}
+{% url 'public:about' as about_url %}
+{% url 'contact:contact' as contact_url %}
+{% url 'accounts:profile' as profile_url %}
+{% url 'accounts:login' as login_url %}
+{% url 'accounts:logout' as logout_url %}
+<nav>
+    <header id="header">
+        <div class="inner visible">
+            <a href="{{ index_url }}" class="logo">INTERGALAXEN</a>
+            <nav id="nav">
+                <a class="{% if request.path == index_url %}active{% endif %}" href="{{ index_url }}">Home</a>
+                <a class="{% if request.path == about_url %}active{% endif %}" href="{{ about_url }}">About</a>
+                <a class="{% if request.path == contact_url %}active{% endif %}" href="{{ contact_url }}">Contact</a>
+            </nav>
+            <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+        </div>
+    </header>
+</nav>

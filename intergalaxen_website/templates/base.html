@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>{% block title %}INTERGALAXEN{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'theme/assets/css/main.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+        
+	</head>
+  
+    <body>
+    {% include 'navbar.html' %}
+        <main id="main">
+            {% block content %}
+            {% endblock %}
+        </main> 
+    {% include 'footer.html' %}
+
+        <!-- Scripts -->
+        <script src="{% static 'theme/assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'theme/assets/js/skel.min.js' %}"></script>
+        <script src="{% static 'theme/assets/js/util.js' %}"></script>
+        <script src="{% static 'theme/assets/js/main.js' %}"></script>
+
+    </body>
+</html>
